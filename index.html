@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
     <script
       src="https://kit.fontawesome.com/4e32ddf12b.js"
       crossorigin="anonymous"
     ></script>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- ? How to make this website responsive using bootstrape -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css -->
-    ">
-    <link rel="stylesheet" href="styles/style.css" />
     <title>login page</title>
   </head>
 
   <body>
-    <button class="login">Login</button>
+    <div class="top-container">
+    <button class="btn-login">Login</button>
+
+    </div>
     <div class="container hidden">
-      <button class="close-login"><i class="fa-solid fa-xmark"></i></button>
-      <h1 class="heading">Login</h1>
+      <button class="btn-close"><i class="fa-solid fa-xmark"></i></button>
+      <h1 class="label-login">Login</h1>
+    
       <ul>
         <li>
-          <input class="box-one" type="text" placeholder="Email" required /><i
-            class="fa-solid fa-xmark"
-          ></i>
+          <input class="box-one" type="text" placeholder="Email" required />
         </li>
         <li>
           <input
@@ -32,15 +37,15 @@
             type="password"
             placeholder="password"
             required
-          /><i class="fa-solid fa-xmark"></i>
+          />
         </li>
-        <li><input class="btn" type="submit" value="submit" /></li>
+        <li>
+          <button class="btn-submit">
+            <i class="fa-solid fa-circle-right"></i>
+          </button>
+        </li>
       </ul>
     </div>
-
-    <button class="dark-theme">Dark<i class="fa-solid fa-moon"></i></button>
-    <button class="light-theme">Light<i class="fa-solid fa-sun"></i></button>
-
     <script src="scripts/script.js"></script>
   </body>
 </html>
