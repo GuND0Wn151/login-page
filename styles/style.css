@@ -3,15 +3,15 @@
   padding: 0;
   box-sizing: border-box;
 }
-body{
-  background-color: #282A3A;
+body {
+  background-color: #282a3a;
 }
-.top-container{
+.top-container {
   text-align: center;
 }
 .container {
   background-color: rgba(128, 128, 128, 0.219);
-  height: 250px;
+  height: 270px;
   width: 350px;
   margin: 30px auto 30px auto;
   border: 1px solid rgba(128, 128, 128, 0.219);
@@ -106,19 +106,28 @@ ul {
   cursor: pointer;
   z-index: 2;
 }
-.btn-close:hover{
-  color: #282A3A;
+.btn-close:hover {
+  color: #282a3a;
   font-size: 1.7rem;
-
 }
-.btn-submit{
+.btn-submit {
   position: relative;
   top: 1rem;
   font-size: 2rem;
   background-color: rgba(128, 128, 128, 0.219);
   border-style: none;
 }
-.btn-submit:hover{
+.btn-submit:hover {
   color: white;
   transition: 0.3s;
+}
+.lebal-message {
+  font-variant: small-caps;
+  font-family: sans-serif;
+  font-weight: 500;
+  text-transform: lowercase;
+  font-style: normal;
+  font-size: larger;
+  letter-spacing: 0;
+  transition: 0.5s;
 }

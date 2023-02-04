@@ -1,9 +1,16 @@
 'use strict';
-
+//Buttons
 const containerLogin = document.querySelector('.container');
 const btnLogin = document.querySelector('.btn-login');
-const btnContainerclose = document.querySelector('.btn-close');
+const btnContainerClose = document.querySelector('.btn-close');
 const btnSubmit = document.querySelector('.btn-submit');
+
+//Message
+const labelMessage = document.querySelector('.lebal-message');
+
+//Inputs
+const inputName = document.querySelector('.box-one');
+const inputPassword = document.querySelector('.box-two');
 
 const openLoginPage = () => {
   containerLogin.classList.remove('hidden');
@@ -17,7 +24,7 @@ btnLogin.addEventListener('click', () => {
   btnLogin.style.opacity = 0;
 });
 
-btnContainerclose.addEventListener('click', () => {
+btnContainerClose.addEventListener('click', () => {
   closeLoginPage();
   btnLogin.style.opacity = 100;
 });
@@ -25,11 +32,28 @@ btnContainerclose.addEventListener('click', () => {
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && !containerLogin.classList.contains('hidden')) {
     closeLoginPage();
+    btnLogin.style.opacity = 100;
   }
 });
 
 btnSubmit.addEventListener('click', () => {
-  btnSubmit.style.opacity = 0;
-  closeLoginPage();
-  btnLogin.style.opacity = 100;
+  const name = inputName.value;
+  const password = inputPassword.value;
+
+  if (name && password) {
+    btnLogin.textContent = 'Login Successfully';
+    btnLogin.style.opacity = 100;
+    btnLogin.style.color = 'Green';
+    inputName.value = inputPassword.value = '';
+    closeLoginPage();
+    //////////////////////////////////
+    localStorage.setItem('key',name);
+
+const personName = localStorage.getItem('key');
+console.log(personName);
+
+  } else {
+    labelMessage.textContent = 'Invalid Name & Password';
+    labelMessage.style.color = 'red';
+  }
 });
