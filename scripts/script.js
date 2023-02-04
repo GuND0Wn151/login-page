@@ -1,33 +1,35 @@
 'use strict';
-const btnSubmit = document.querySelector('.btn');
-const modal = document.querySelector('.container');
-const loginUI = document.querySelector('.login');
-const closelogin = document.querySelector('.close-login');
 
-const openLoginPage = function () {
-  modal.classList.remove('hidden');
+const containerLogin = document.querySelector('.container');
+const btnLogin = document.querySelector('.btn-login');
+const btnContainerclose = document.querySelector('.btn-close');
+const btnSubmit = document.querySelector('.btn-submit');
+
+const openLoginPage = () => {
+  containerLogin.classList.remove('hidden');
 };
-const closeLoginPage = function () {
-  modal.classList.add('hidden');
+const closeLoginPage = () => {
+  containerLogin.classList.add('hidden');
 };
 
-loginUI.addEventListener('click', openLoginPage);
+btnLogin.addEventListener('click', () => {
+  openLoginPage();
+  btnLogin.style.opacity = 0;
+});
 
-closelogin.addEventListener('click', closeLoginPage);
+btnContainerclose.addEventListener('click', () => {
+  closeLoginPage();
+  btnLogin.style.opacity = 100;
+});
 
-const darkTheme = document
-  .querySelector('.dark-theme')
-  .addEventListener('click', function () {
-    document.querySelector('body').style.backgroundColor = 'black';
-  });
-const lightTheme = document
-  .querySelector('.light-theme')
-  .addEventListener('click', function () {
-    document.querySelector('body').style.backgroundColor = 'white';
-  });
-
-document.addEventListener('keydown', function (e) {
-  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && !containerLogin.classList.contains('hidden')) {
     closeLoginPage();
   }
+});
+
+btnSubmit.addEventListener('click', () => {
+  btnSubmit.style.opacity = 0;
+  closeLoginPage();
+  btnLogin.style.opacity = 100;
 });
