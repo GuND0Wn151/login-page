@@ -51,9 +51,6 @@ btnSubmit.addEventListener('click', () => {
     inputName.value = inputPassword.value = '';
     closeLoginPage();
     //////////////////////////////////
-
-    localStorage.setItem('fName', name);
-    localStorage.setItem('password', password);
   } else {
     labelMessage.textContent = 'Invalid Name & Password';
     labelMessage.style.color = 'red';
