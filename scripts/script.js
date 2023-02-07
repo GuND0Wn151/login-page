@@ -41,17 +41,15 @@ btnSubmit.addEventListener('click', () => {
   const password = inputPassword.value;
 
   if (name && password) {
-    btnLogin.textContent = 'Login Successfully';
+    btnLogin.textContent = `Login\n Successfully`;
     btnLogin.style.opacity = 100;
     btnLogin.style.color = 'Green';
     inputName.value = inputPassword.value = '';
     closeLoginPage();
     //////////////////////////////////
-    localStorage.setItem('key',name);
 
-const personName = localStorage.getItem('key');
-console.log(personName);
-
+    localStorage.setItem('fName', name);
+    localStorage.setItem('password', password);
   } else {
     labelMessage.textContent = 'Invalid Name & Password';
     labelMessage.style.color = 'red';
