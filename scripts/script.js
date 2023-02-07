@@ -12,6 +12,9 @@ const labelMessage = document.querySelector('.lebal-message');
 const inputName = document.querySelector('.box-one');
 const inputPassword = document.querySelector('.box-two');
 
+// Add Sounds
+const soundDenied = new Audio('sounds/login-denied.mp3');
+
 const openLoginPage = () => {
   containerLogin.classList.remove('hidden');
 };
@@ -54,5 +57,6 @@ btnSubmit.addEventListener('click', () => {
   } else {
     labelMessage.textContent = 'Invalid Name & Password';
     labelMessage.style.color = 'red';
+    soundDenied.play();
   }
 });
