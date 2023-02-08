@@ -9,8 +9,8 @@ const btnSubmit = document.querySelector('.btn-submit');
 const labelMessage = document.querySelector('.lebal-message');
 
 //Inputs
-const inputName = document.querySelector('.box-one');
-const inputPassword = document.querySelector('.box-two');
+const inputName = document.querySelector('.input__name');
+const inputPassword = document.querySelector('.input__password');
 
 // Add Sounds
 const soundDenied = new Audio('sounds/login-denied.mp3');
@@ -52,8 +52,8 @@ btnSubmit.addEventListener('click', () => {
     closeLoginPage();
     //////////////////////////////////
   } else {
+    soundDenied.play();
     labelMessage.textContent = 'Invalid Name & Password';
     labelMessage.style.color = 'red';
-    soundDenied.play();
   }
 });

@@ -14,7 +14,7 @@ body {
   height: 270px;
   width: 350px;
   margin: 30px auto 30px auto;
-  border: 1px solid rgba(128, 128, 128, 0.219);
+  border: 1px inset rgba(128, 128, 128, 0.219);
   position: relative;
   border-radius: 1px;
 }
@@ -34,7 +34,7 @@ ul {
   text-align: center;
   list-style-type: none;
 }
-.box-one {
+.input__name {
   font-size: 1.1rem;
   padding: 8px 0px;
   text-align: center;
@@ -44,7 +44,7 @@ ul {
   background-color: black;
   color: white;
 }
-.box-two {
+.input__password {
   font-size: 1.1rem;
   margin-top: 30px;
   padding: 8px 0px;
@@ -83,16 +83,6 @@ ul {
   display: none;
 }
 
-.box1:hover {
-  box-shadow: 1px 1px 5px lawngreen;
-  transition: 0.5s;
-}
-
-.box2:hover {
-  box-shadow: 1px 1px 5px lawngreen;
-  transition: 0.5s;
-}
-
 .btn-close {
   font-size: 1.6rem;
   background-color: rgba(128, 128, 128, 0.219);
@@ -113,9 +103,9 @@ ul {
 .btn-submit {
   position: relative;
   top: 1rem;
-  font-size: 2rem;
-  background-color: rgba(128, 128, 128, 0.219);
+  font-size: 2.3rem;
   border-style: none;
+  background: none;
 }
 .btn-submit:hover {
   color: white;
