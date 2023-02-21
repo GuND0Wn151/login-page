@@ -75,10 +75,6 @@ ul {
   font-weight: 900;
   text-transform: uppercase;
 }
-.btn-login:hover {
-  border-bottom-color: red;
-  transition: 0.5s;
-}
 .hidden {
   display: none;
 }

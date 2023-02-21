@@ -43,9 +43,10 @@ btnSubmit.addEventListener('click', () => {
   const name = inputName.value;
   const password = inputPassword.value;
 
+  
   if (name && password) {
     btnLogin.style.fontSize = '2rem';
-    btnLogin.textContent = `Login\n Successfully`;
+    btnLogin.textContent = `Welcome: ${name}`;
     btnLogin.style.opacity = 100;
     btnLogin.style.color = 'Green';
     inputName.value = inputPassword.value = '';
