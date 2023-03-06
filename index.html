@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,25 +23,29 @@
   </head>
 
   <body>
-
-     
     <div class="top-container">
-    <button class="btn-login">Login</button>
-
+      <span class="material-symbols-outlined"> login </span>J
+      <button class="btn-login">
+      Login
+      </button>
     </div>
-
     <!-- Login Container -->
     <div class="container hidden">
-
       <!--Login Container Close button -->
       <button class="btn-close"><i class="fa-solid fa-xmark"></i></button>
 
       <h1 class="label-login">Login</h1>
-    
+
       <ul>
         <li>
           <p class="lebal-message"></p>
-          <input class="input__name" type="text" placeholder="Name" required maxlength="10" />
+          <input
+            class="input__name"
+            type="text"
+            placeholder="Name"
+            required
+            maxlength="10"
+          />
         </li>
         <li>
           <input
@@ -45,7 +53,8 @@
             type="password"
             placeholder="password"
             required
-           maxlength="8"/>
+            maxlength="8"
+          />
         </li>
         <li>
           <button class="btn-submit">

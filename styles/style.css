@@ -62,18 +62,26 @@ ul {
   font-family: sans-serif;
 }
 .btn-login {
+  letter-spacing: 1px;
   cursor: pointer;
   position: relative;
   top: 10rem;
   background: none;
   font-size: 5rem;
-  cursor: pointer;
-  border-bottom-color: aquamarine;
   transition: 0.5s;
   font-family: sans-serif;
   border: none;
   font-weight: 900;
   text-transform: uppercase;
+  color: white;
+}
+.material-symbols-outlined{
+display: block;
+position: relative;
+top: 10rem;
+color: rgba(250, 235, 215, 0.519);
+font-size: 5rem;
+font-weight: bold;
 }
 .hidden {
   display: none;
