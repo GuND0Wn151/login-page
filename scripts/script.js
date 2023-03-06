@@ -5,15 +5,17 @@ const btnLogin = document.querySelector('.btn-login');
 const btnContainerClose = document.querySelector('.btn-close');
 const btnSubmit = document.querySelector('.btn-submit');
 
-//Message
+//Messages
 const labelMessage = document.querySelector('.lebal-message');
 
 //Inputs
 const inputName = document.querySelector('.input__name');
 const inputPassword = document.querySelector('.input__password');
 
-// Add Sounds
-const soundDenied = new Audio('sounds/login-denied.mp3');
+// Play Audio Function
+const playAudio = function(audioPath){
+new Audio(`${audioPath}`).play();
+}
 
 const openLoginPage = () => {
   containerLogin.classList.remove('hidden');
@@ -43,8 +45,8 @@ btnSubmit.addEventListener('click', () => {
   const name = inputName.value;
   const password = inputPassword.value;
 
-  
   if (name && password) {
+    playAudio('sounds/login-successfully.mp3')
     btnLogin.style.fontSize = '2rem';
     btnLogin.textContent = `Welcome: ${name}`;
     btnLogin.style.opacity = 100;
@@ -53,7 +55,7 @@ btnSubmit.addEventListener('click', () => {
     closeLoginPage();
     //////////////////////////////////
   } else {
-    soundDenied.play();
+    playAudio('sounds/login-denied.mp3')
     labelMessage.textContent = 'Invalid Name & Password';
     labelMessage.style.color = 'red';
   }
