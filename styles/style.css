@@ -16,13 +16,15 @@ body {
   margin: 30px auto 30px auto;
   border: 1px inset rgba(128, 128, 128, 0.219);
   position: relative;
-  border-radius: 1px;
+  border-radius: 3px;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 .label-login {
   color: #ffffff32;
   font-size: 2.5rem;
   font-family: 'Rubik', sans-serif;
-
+  padding-top: 1rem;
   text-transform: uppercase;
   text-align: center;
   position: relative;
@@ -35,8 +37,9 @@ ul {
   list-style-type: none;
 }
 .input__name {
+  width: 220px;
+  height: 35px;
   font-size: 1.1rem;
-  padding: 8px 0px;
   text-align: center;
   border: 1px outset red;
   border-style: none;
@@ -47,20 +50,25 @@ ul {
 .input__password {
   font-size: 1.1rem;
   margin-top: 30px;
-  padding: 8px 0px;
+  width: 220px;
+  height: 35px;
   text-align: center;
-  border: 1px outset red;
   border-style: none;
   border-radius: 3px;
   background-color: black;
   color: white;
 }
 ::placeholder {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   text-transform: capitalize;
   color: rgba(255, 255, 255, 0.342);
   font-family: sans-serif;
 }
+.input__name,
+.input__password:focus {
+  outline: none;
+}
+
 .btn-login {
   letter-spacing: 1px;
   cursor: pointer;
@@ -71,26 +79,23 @@ ul {
   transition: 0.5s;
   font-family: sans-serif;
   border: none;
-  font-weight: 900;
+  font-weight: 700;
   text-transform: uppercase;
   color: white;
 }
-.material-symbols-outlined{
-display: block;
-position: relative;
-top: 10rem;
-color: rgba(250, 235, 215, 0.519);
-font-size: 5rem;
-font-weight: bold;
+.material-symbols-outlined {
+  display: block;
+  position: relative;
+  top: 10rem;
+  color: rgba(250, 235, 215, 0.519);
+  font-size: 5rem;
+  font-weight: bold;
 }
 .hidden {
   display: none;
 }
-
 .btn-close {
   font-size: 1.6rem;
-  background-color: rgba(128, 128, 128, 0.219);
-  color: white;
   position: absolute;
   right: 5px;
   border: none;
@@ -99,6 +104,7 @@ font-weight: bold;
   color: grey;
   cursor: pointer;
   z-index: 2;
+  padding: 5px;
 }
 .btn-close:hover {
   color: #282a3a;

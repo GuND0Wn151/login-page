@@ -43,7 +43,6 @@ document.addEventListener('keydown', e => {
     btnLogin.style.opacity = 100;
   }
 });
-
 btnSubmit.addEventListener('click', () => {
   const name = inputName.value;
   const password = inputPassword.value;
@@ -55,7 +54,6 @@ btnSubmit.addEventListener('click', () => {
     btnLogin.style.opacity = 100;
     inputName.value = inputPassword.value = '';
     closeLoginPage();
-    //////////////////////////////////
   } else {
     playAudio('sounds/login-denied.mp3');
     labelMessage.textContent = 'Invalid Name & Password';
