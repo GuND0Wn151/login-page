@@ -53,16 +53,21 @@ btnSubmit.addEventListener('click', () => {
   const randomNumber = Math.trunc(Math.random() * 10) + 1;
 
   let timer = randomNumber;
-
   body.style.cursor = 'wait';
 
-  setInterval(() => {
+  const p = document.createElement('p');
+  p.textContent = `Loading...`;
+  p.classList.add('label__loading');
+
+  containerLogin.prepend(p);
+
+  const loadingTimer = setInterval(() => {
     timer--;
     console.log(timer);
 
     if (timer === 0) {
       body.style.cursor = 'text';
-
+      clearInterval(loadingTimer);
       if (name && password) {
         playAudio('sounds/login-successfully.mp3');
         btnLogin.style.fontSize = '2rem';

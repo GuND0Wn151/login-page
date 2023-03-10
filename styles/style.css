@@ -132,3 +132,9 @@ ul {
   letter-spacing: 0;
   transition: 0.5s;
 }
+.label__loading {
+  text-align: center;
+  font-size: 1rem;
+  color: #fff;
+  font-family: sans-serif;
+}
