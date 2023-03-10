@@ -13,6 +13,9 @@ const labelMessage = document.querySelector('.lebal-message');
 const inputName = document.querySelector('.input__name');
 const inputPassword = document.querySelector('.input__password');
 
+//body
+const body = document.querySelector('body');
+
 // Play Audio Function
 const playAudio = function (audioPath) {
   new Audio(`${audioPath}`).play();
@@ -46,17 +49,31 @@ document.addEventListener('keydown', e => {
 btnSubmit.addEventListener('click', () => {
   const name = inputName.value;
   const password = inputPassword.value;
+  inputName.value = inputPassword.value = '';
+  const randomNumber = Math.trunc(Math.random() * 10) + 1;
 
-  if (name && password) {
-    playAudio('sounds/login-successfully.mp3');
-    btnLogin.style.fontSize = '2rem';
-    btnLogin.textContent = `Welcome: ${name}`;
-    btnLogin.style.opacity = 100;
-    inputName.value = inputPassword.value = '';
-    closeLoginPage();
-  } else {
-    playAudio('sounds/login-denied.mp3');
-    labelMessage.textContent = 'Invalid Name & Password';
-    labelMessage.style.color = 'red';
-  }
+  let timer = randomNumber;
+
+  body.style.cursor = 'wait';
+
+  setInterval(() => {
+    timer--;
+    console.log(timer);
+
+    if (timer === 0) {
+      body.style.cursor = 'text';
+
+      if (name && password) {
+        playAudio('sounds/login-successfully.mp3');
+        btnLogin.style.fontSize = '2rem';
+        btnLogin.textContent = `Welcome: ${name}`;
+        btnLogin.style.opacity = 100;
+        closeLoginPage();
+      } else {
+        playAudio('sounds/login-denied.mp3');
+        labelMessage.textContent = 'Invalid Name & Password';
+        labelMessage.style.color = 'red';
+      }
+    }
+  }, 1000);
 });

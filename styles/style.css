@@ -116,6 +116,7 @@ ul {
   font-size: 2.3rem;
   border-style: none;
   background: none;
+  cursor: pointer;
 }
 .btn-submit:hover {
   color: white;
