@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #1a120b;
+  background-color: #00ADB5;
 }
 #top__container {
   text-align: center;
@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-  border: 0.5px outset #fff;
+  border: 0.5px solid #fff;
   position: fixed;
   padding: 2rem;
   width: 20rem;
@@ -112,16 +112,4 @@ body {
   color: white;
   transition: 0.3s;
 }
-.lebal-message {
-  font-family: sans-serif;
-  font-weight: 500;
-  text-transform: lowercase;
-  font-size: larger;
-  transition: 0.5s;
-}
-.label__loading {
-  text-align: center;
-  font-size: 1.5rem;
-  color: #fff;
-  font-family: sans-serif;
-}
+
