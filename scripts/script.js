@@ -24,7 +24,7 @@ const functionLogin = function () {
   const randomNumber = Math.trunc(Math.random() * 10) + 1;
 
   let timer = randomNumber;
-  body.style.cursor = 'wait';
+  body.style.cursor = 'not-allowed';
 
   const p = document.createElement('p');
   p.innerHTML = `<button class="btn btn-primary" type="button" disabled>
@@ -53,7 +53,8 @@ const functionLogin = function () {
         closeLoginPage();
       } else {
         playAudio('sounds/login-denied.mp3');
-        labelMessage.textContent = 'Invalid Name & Password';
+        labelMessage.innerHTML =`<div class="alert alert-danger alert-dismissible fade show" role="alert">invalid name & password
+        <button type="button" class="btn-close "data-bs-dismiss="alert" aria-label="Close"></button>`;
         labelMessage.style.color = 'red';
         p.remove();
       }
